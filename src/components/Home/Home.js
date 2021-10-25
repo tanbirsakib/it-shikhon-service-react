@@ -1,13 +1,12 @@
-import React, { useEffect, useState } from "react";
-import "./Home.css";
+import React from "react";
 import img from "../../images/homeside.png";
 import { SearchIcon } from "@heroicons/react/solid";
 import Course from "../Course/Course";
 import useService from "../../hooks/useService";
 const Home = () => {
-    const [courses] = useService();
-    const threeCourses = courses.slice(0, 4);
-  
+  const [courses] = useService();
+  const threeCourses = courses.slice(0, 4);
+
   return (
     <div className="home-container">
       <div className="w-3/6 mx-auto mt-4">
@@ -29,12 +28,14 @@ const Home = () => {
         </h1>
         <img className="w-64" src={img} alt="" />
       </div>
-      <h1 className = "text-center text-4xl text-red-400 ml-6 font-bold m-2 italic">Featured Courses</h1>
-     <div className="courses grid grid-cols-3 gap-4 w-11/12 mx-auto">
-     {
-          threeCourses.map(course => <Course key={course.id} course={course}></Course>)
-      } 
-     </div>
+      <h1 className="text-center text-4xl text-red-400 ml-6 font-bold m-2 italic">
+        Featured Courses
+      </h1>
+      <div className="courses grid grid-cols-3 gap-4 w-11/12 mx-auto">
+        {threeCourses.map((course) => (
+          <Course key={course.id} course={course}></Course>
+        ))}
+      </div>
     </div>
   );
 };
