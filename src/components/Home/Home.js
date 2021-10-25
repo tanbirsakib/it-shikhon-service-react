@@ -6,6 +6,7 @@ import Course from "../Course/Course";
 import useService from "../../hooks/useService";
 const Home = () => {
     const [courses] = useService();
+    const threeCourses = courses.slice(0, 4);
   
   return (
     <div className="home-container">
@@ -31,7 +32,7 @@ const Home = () => {
       <h1 className = "text-center text-4xl text-red-400 ml-6 font-bold m-2 italic">Featured Courses</h1>
      <div className="courses grid grid-cols-3 gap-4 w-11/12 mx-auto">
      {
-          courses.map(course => <Course key={course.id} course={course}></Course>)
+          threeCourses.map(course => <Course key={course.id} course={course}></Course>)
       } 
      </div>
     </div>
