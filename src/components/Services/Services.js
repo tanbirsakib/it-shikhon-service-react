@@ -4,6 +4,7 @@ import Course from "../Course/Course";
 import serviceImg from "../../images/service.png";
 
 const Services = () => {
+  //getting data from custom hook
   const [courses] = useService();
   return (
     <div>

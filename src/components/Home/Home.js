@@ -4,6 +4,7 @@ import { SearchIcon } from "@heroicons/react/solid";
 import Course from "../Course/Course";
 import useService from "../../hooks/useService";
 const Home = () => {
+  //getting data from custom hook
   const [courses] = useService();
   const threeCourses = courses.slice(0, 4);
 

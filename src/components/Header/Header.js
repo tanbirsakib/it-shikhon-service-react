@@ -1,6 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
+//style for navlink
 const style = {
   fontWeight: "bold",
   color: "#FDCA5C",
